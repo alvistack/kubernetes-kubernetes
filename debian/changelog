@@ -1,0 +1,5 @@
+kubernetes (100:1.25.2-1) UNRELEASED; urgency=medium
+
+  * https://github.com/kubernetes/kubernetes/releases/tag/v1.25.2
+
+ -- Wong Hoi Sing Edison <hswong3i@gmail.com>  Thu, 22 Sep 2022 10:16:25 +0800
