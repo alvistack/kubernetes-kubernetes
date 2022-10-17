@@ -1,0 +1,45 @@
+Source: kubernetes
+Section: misc
+Priority: optional
+Standards-Version: 4.5.0
+Maintainer: Wong Hoi Sing Edison <hswong3i@gmail.com>
+Homepage: https://github.com/kubernetes/kubernetes/tags
+Vcs-Browser: https://github.com/alvistack/kubernetes-kubernetes
+Vcs-Git: https://github.com/alvistack/kubernetes-kubernetes.git
+Build-Depends:
+ debhelper,
+ debhelper-compat (= 10),
+ golang-1.17,
+ rsync,
+
+Package: kubernetes-kubectl
+Architecture: amd64
+Description: Kubernetes Command Line Tool
+ The Kubernetes command line tool for interacting with the Kubernetes API.
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
+
+Package: kubernetes-kubelet
+Architecture: amd64
+Description: Kubernetes Node Agent
+ The node agent of Kubernetes, the container cluster manager.
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
+ conntrack,
+ containernetworking-plugins,
+ ebtables,
+ ethtool,
+ iproute2,
+ iptables (>= 1.4.21),
+ socat,
+ util-linux (>= 2.23.1),
+
+Package: kubernetes-kubeadm
+Architecture: amd64
+Description: Kubernetes Cluster Bootstrapping Tool
+ The Kubernetes command line tool for bootstrapping a Kubernetes cluster.
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
