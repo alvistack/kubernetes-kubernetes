@@ -1,0 +1,5 @@
+kubernetes (100:1.24.11-1) UNRELEASED; urgency=medium
+
+  * https://github.com/kubernetes/kubernetes/releases/tag/v1.24.11
+
+ -- Wong Hoi Sing Edison <hswong3i@pantarei-design.com>  Wed, 01 Mar 2023 17:10:09 +0800

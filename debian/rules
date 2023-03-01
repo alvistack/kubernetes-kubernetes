@@ -1,0 +1,33 @@
+#!/usr/bin/make -f
+
+SHELL := /bin/bash
+
+override_dh_auto_build:
+	set -ex && \
+		export KUBE_GIT_TREE_STATE="clean" && \
+		export KUBE_GIT_COMMIT="0f75679e3346160939924550fd3591462a4afec6" && \
+		export KUBE_GIT_VERSION="v1.24.11" && \
+		make WHAT="cmd/kubelet" && \
+		make WHAT="cmd/kubeadm" && \
+		make WHAT="cmd/kubectl"
+
+override_dh_auto_install:
+	install -Dpm755 -d debian/tmp/etc/kubernetes/manifests
+	install -Dpm755 -d debian/tmp/usr/bin
+	install -Dpm755 -d debian/tmp/usr/share/bash-completion/completions
+	install -Dpm755 -d debian/tmp/lib/systemd/system
+	install -Dpm755 -d debian/tmp/lib/systemd/system/kubelet.service.d
+	install -Dpm755 -t debian/tmp/usr/bin _output/local/go/bin/kubeadm
+	install -Dpm755 -t debian/tmp/usr/bin _output/local/go/bin/kubectl
+	install -Dpm755 -t debian/tmp/usr/bin _output/local/go/bin/kubelet
+	install -Dpm644 -t debian/tmp/lib/systemd/system lib/systemd/system/kubelet.service
+	install -Dpm644 -t debian/tmp/lib/systemd/system/kubelet.service.d lib/systemd/system/kubelet.service.d/10-kubeadm.conf
+	./_output/local/go/bin/kubectl completion bash > debian/tmp/usr/share/bash-completion/completions/kubectl
+	./_output/local/go/bin/kubeadm completion bash > debian/tmp/usr/share/bash-completion/completions/kubeadm
+
+override_dh_auto_test:
+
+override_dh_auto_clean:
+
+%:
+	dh $@
