@@ -1,0 +1,8 @@
+*.substvars
+*debhelper*
+.debhelper
+files
+kubernetes-kubeadm
+kubernetes-kubectl
+kubernetes-kubelet
+tmp
