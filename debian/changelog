@@ -1,0 +1,5 @@
+kubernetes (100:1.33.8-1) UNRELEASED; urgency=medium
+
+  * https://github.com/kubernetes/kubernetes/releases/tag/v1.33.8
+
+ -- Wong Hoi Sing Edison <hswong3i@pantarei-design.com>  Wed, 11 Feb 2026 11:16:18 +0800
