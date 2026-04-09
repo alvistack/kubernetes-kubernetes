@@ -1,0 +1,5 @@
+kubernetes-kubeadm: copyright-without-copyright-notice
+kubernetes-kubeadm: initial-upload-closes-no-bugs
+kubernetes-kubeadm: no-manual-page
+kubernetes-kubeadm: statically-linked-binary
+kubernetes-kubeadm: zero-byte-file-in-doc-directory
