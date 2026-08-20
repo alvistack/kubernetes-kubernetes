@@ -1,0 +1,3 @@
+lib/systemd/system/kubelet.service.d/10-kubeadm.conf
+usr/bin/kubeadm
+usr/share/bash-completion/completions/kubeadm
