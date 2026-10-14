@@ -1,0 +1,5 @@
+kubernetes-kubectl: copyright-without-copyright-notice
+kubernetes-kubectl: initial-upload-closes-no-bugs
+kubernetes-kubectl: no-manual-page
+kubernetes-kubectl: statically-linked-binary
+kubernetes-kubectl: zero-byte-file-in-doc-directory
