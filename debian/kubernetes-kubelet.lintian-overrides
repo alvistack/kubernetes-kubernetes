@@ -1,0 +1,5 @@
+kubernetes-kubelet: copyright-without-copyright-notice
+kubernetes-kubelet: hardening-no-pie
+kubernetes-kubelet: initial-upload-closes-no-bugs
+kubernetes-kubelet: no-manual-page
+kubernetes-kubelet: zero-byte-file-in-doc-directory
